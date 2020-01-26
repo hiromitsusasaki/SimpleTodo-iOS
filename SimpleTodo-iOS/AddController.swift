@@ -18,8 +18,9 @@ class AddController: UIViewController {
     
 
     @IBAction func TodoRegisterButton(_ sender: Any) {
+        TodoItems.append(TodoTitleField.text!)
+        
         TodoTitleField.text = ""
-        TodoDescriptionField.text = ""
         
         UserDefaults.standard.set( TodoItems, forKey: "TodoList")
     }

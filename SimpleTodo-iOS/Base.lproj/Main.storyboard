@@ -54,9 +54,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <keyCommands>
-                        <keyCommand/>
-                    </keyCommands>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,9 +120,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dap-N6-Twg"/>
                     </view>
-                    <keyCommands>
-                        <keyCommand/>
-                    </keyCommands>
                     <connections>
                         <outlet property="TodoDescriptionField" destination="PeY-wS-dgJ" id="XSY-Cp-6nA"/>
                         <outlet property="TodoTitleField" destination="7gA-dr-YeN" id="one-Az-Xmh"/>
@@ -133,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64J-WG-GQ5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="764.67391304347836"/>
+            <point key="canvasLocation" x="896" y="111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y0W-Wu-7m5">
@@ -156,12 +150,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zyE-fa-b8L"/>
                     </view>
-                    <keyCommands>
-                        <keyCommand/>
-                    </keyCommands>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHX-HR-IVM" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="871"/>
         </scene>
     </scenes>
 </document>
