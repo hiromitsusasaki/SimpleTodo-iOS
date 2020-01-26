@@ -8,7 +8,7 @@
 
 import UIKit
 
-var TodoItems = [String]()
+var TodoItems = [Todo]()
 
 class AddController: UIViewController {
 
@@ -18,11 +18,13 @@ class AddController: UIViewController {
     
 
     @IBAction func TodoRegisterButton(_ sender: Any) {
-        TodoItems.append(TodoTitleField.text!)
+        let todo = Todo(title: TodoTitleField.text!, description: TodoDescriptionField.text!)
+        TodoItems.append(todo)
         
         TodoTitleField.text = ""
+        TodoDescriptionField.text = ""
         
-        UserDefaults.standard.set( TodoItems, forKey: "TodoList")
+        UserDefaults.standard.set( TodoItems, forKey: "TodoItems")
     }
     
     override func viewDidLoad() {

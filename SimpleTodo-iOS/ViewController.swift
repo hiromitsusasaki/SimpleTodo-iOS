@@ -15,16 +15,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let TodoCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
-        TodoCell.textLabel!.text = TodoItems[indexPath.row]
+        TodoCell.textLabel!.text = TodoItems[indexPath.row].getTitle()
         return TodoCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = TodoItems[indexPath.row]
+        if let detailController = storyboard?.instantiateViewController(withIdentifier: "DetailController") as? DetailController {
+            detailController.todoItem = selectedItem
+            navigationController?.pushViewController(detailController, animated: true)
+        }
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if UserDefaults.standard.object(forKey: "TodoList") != nil {
-            TodoItems = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+        if UserDefaults.standard.object(forKey: "TodoItems") != nil {
+            TodoItems = UserDefaults.standard.object(forKey: "TodoItems") as! [Todo]
         }
     }
 
