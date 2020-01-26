@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <action selector="TodoRegisterButton:" destination="0Qm-Md-mDn" eventType="touchUpInside" id="oiW-cc-07B"/>
+                                    <action selector="TodoRegisterButton:" destination="0Qm-Md-mDn" eventType="touchUpInside" id="MNb-RJ-2Ak"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PeY-wS-dgJ">
@@ -121,13 +121,13 @@
                         <viewLayoutGuide key="safeArea" id="dap-N6-Twg"/>
                     </view>
                     <connections>
-                        <outlet property="TodoDescriptionField" destination="PeY-wS-dgJ" id="XSY-Cp-6nA"/>
-                        <outlet property="TodoTitleField" destination="7gA-dr-YeN" id="one-Az-Xmh"/>
+                        <outlet property="TodoDescriptionField" destination="PeY-wS-dgJ" id="T2D-qw-NUl"/>
+                        <outlet property="TodoTitleField" destination="7gA-dr-YeN" id="FQj-Ws-8hE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64J-WG-GQ5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="111"/>
+            <point key="canvasLocation" x="895.6521739130435" y="110.86956521739131"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="Y0W-Wu-7m5">
@@ -193,6 +193,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JxG-pb-jXD"/>
+        <segue reference="sE4-RA-9bc"/>
     </inferredMetricsTieBreakers>
 </document>

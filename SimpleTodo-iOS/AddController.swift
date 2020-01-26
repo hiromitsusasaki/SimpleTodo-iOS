@@ -23,8 +23,13 @@ class AddController: UIViewController {
         
         TodoTitleField.text = ""
         TodoDescriptionField.text = ""
+        do {
+            let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: TodoItems, requiringSecureCoding: true)
+            UserDefaults.standard.set( encodedData, forKey: "TodoItems")
+        } catch let error as NSError {
+            print(error)
+        }
         
-        UserDefaults.standard.set( TodoItems, forKey: "TodoItems")
     }
     
     override func viewDidLoad() {

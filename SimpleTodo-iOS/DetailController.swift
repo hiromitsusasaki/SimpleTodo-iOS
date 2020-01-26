@@ -9,16 +9,20 @@
 import UIKit
 
 class DetailController: UIViewController {
-    @IBOutlet weak var TitleText: UILabel!
-    @IBOutlet weak var DescriptionText: UILabel!
+    @IBOutlet weak var TitleTextLabel: UILabel!
+    @IBOutlet weak var DescriptionTextLabel: UILabel!
     
-    var todoItem: Todo? = nil
+    var index: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        TitleText.text = todoItem?.getTitle()
-        DescriptionText.text = todoItem?.getDescription()
+        if UserDefaults.standard.object(forKey: "TodoItems") != nil {
+            TodoItems = UserDefaults.standard.object(forKey: "TodoItems") as! [Todo]
+        }
+        
+        TitleTextLabel.text = TodoItems[index].getTitle()
+        DescriptionTextLabel.text = TodoItems[index].getDescription()
     }
     
 

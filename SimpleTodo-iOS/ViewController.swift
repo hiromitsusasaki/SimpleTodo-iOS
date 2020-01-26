@@ -20,9 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = TodoItems[indexPath.row]
+        let index = indexPath.row
         if let detailController = storyboard?.instantiateViewController(withIdentifier: "DetailController") as? DetailController {
-            detailController.todoItem = selectedItem
+            detailController.index = index
             navigationController?.pushViewController(detailController, animated: true)
         }
     }
