@@ -20,7 +20,13 @@ class AddController: UIViewController {
         TodoTitleField.text = ""
         TodoDescriptionField.text = ""
         
-        // post task
+        TaskClient().createTask(task: task, completionHander: {[weak self] (status) in
+            if status == "success" {
+                
+            } else {
+                
+            }
+        })
     }
     
     override func viewDidLoad() {

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tasks: [Task]?
+    @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks?.count ?? -1
@@ -36,6 +37,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view.
         TaskClient().fetchTasks {[weak self] (tasks) in
             self?.tasks = tasks
+            DispatchQueue.main.async {
+                self?.tableView?.reloadData()
+            }
         }
     }
 
