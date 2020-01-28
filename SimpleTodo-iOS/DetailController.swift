@@ -9,31 +9,16 @@
 import UIKit
 
 class DetailController: UIViewController {
+    
     @IBOutlet weak var TitleTextLabel: UILabel!
     @IBOutlet weak var DescriptionTextLabel: UILabel!
     
-    var index: Int = -1
+    var task: Task = Task(id: -1, title: "", description: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if UserDefaults.standard.object(forKey: "TodoItems") != nil {
-            TodoItems = UserDefaults.standard.object(forKey: "TodoItems") as! [Todo]
-        }
         
-        TitleTextLabel.text = TodoItems[index].getTitle()
-        DescriptionTextLabel.text = TodoItems[index].getDescription()
+        TitleTextLabel.text = task.title
+        DescriptionTextLabel.text = task.description
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

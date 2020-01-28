@@ -9,20 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var tasks: [Task]?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TodoItems.count
+        return tasks?.count ?? -1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let TodoCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
-        TodoCell.textLabel!.text = TodoItems[indexPath.row].getTitle()
+        TodoCell.textLabel!.text = tasks?[indexPath.row].title
         return TodoCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         if let detailController = storyboard?.instantiateViewController(withIdentifier: "DetailController") as? DetailController {
-            detailController.index = index
+            detailController.task = tasks?[index] ?? Task(id: -1, title: "", description: "")
             navigationController?.pushViewController(detailController, animated: true)
         }
     }
@@ -31,8 +34,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if UserDefaults.standard.object(forKey: "TodoItems") != nil {
-            TodoItems = UserDefaults.standard.object(forKey: "TodoItems") as! [Todo]
+        TaskClient().fetchTasks {[weak self] (tasks) in
+            self?.tasks = tasks
         }
     }
 

@@ -9,19 +9,13 @@
 import Foundation
 
 class Todo {
-    var mTitle: String
-    var mDescription: String
+    var id: Int
+    var title: String
+    var description: String
     
-    init(title: String, description:String) {
-        mTitle = title
-        mDescription = description
-    }
-    
-    func getTitle() -> String {
-        return mTitle
-    }
-    
-    func getDescription() -> String {
-        return mDescription
+    init(id: Int, title: String, description: String) {
+        self.id = id
+        self.title = title
+        self.description = description
     }
 }

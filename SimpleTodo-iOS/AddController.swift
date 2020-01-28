@@ -8,28 +8,19 @@
 
 import UIKit
 
-var TodoItems = [Todo]()
-
 class AddController: UIViewController {
-
 
     @IBOutlet weak var TodoTitleField: UITextField!
     @IBOutlet weak var TodoDescriptionField: UITextField!
     
-
+    var task: Task = Task(id: -1, title: "", description: "")
+    
     @IBAction func TodoRegisterButton(_ sender: Any) {
-        let todo = Todo(title: TodoTitleField.text!, description: TodoDescriptionField.text!)
-        TodoItems.append(todo)
-        
+        task = Task(id: -1, title: TodoTitleField.text!, description: TodoDescriptionField.text!)
         TodoTitleField.text = ""
         TodoDescriptionField.text = ""
-        do {
-            let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: TodoItems, requiringSecureCoding: true)
-            UserDefaults.standard.set( encodedData, forKey: "TodoItems")
-        } catch let error as NSError {
-            print(error)
-        }
         
+        // post task
     }
     
     override func viewDidLoad() {
