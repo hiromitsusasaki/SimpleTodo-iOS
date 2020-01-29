@@ -13,25 +13,45 @@ class RegisterController: UIViewController {
     @IBOutlet weak var TodoTitleField: UITextField!
     @IBOutlet weak var TodoDescriptionField: UITextField!
     
-    var task: Task = Task(id: -1, title: "", description: "")
+    var id: Int = -1
+    var originTitle: String = ""
+    var originDescription: String = ""
+    var isCreate: Bool = true
     
     @IBAction func TodoRegisterButton(_ sender: Any) {
-        task = Task(id: -1, title: TodoTitleField.text!, description: TodoDescriptionField.text!)
-        TodoTitleField.text = ""
-        TodoDescriptionField.text = ""
-        
-        TaskClient().createTask(task: task, completionHander: {[weak self] (status) in
-            if status == "success" {
-                
-            } else {
-                
-            }
-        })
+        let task = Task(id: self.id, title: TodoTitleField.text!, description: TodoDescriptionField.text!)
+        if (self.isCreate) {
+            TaskClient().createTask(task: task, completionHander: {[weak self] (status) in
+                if status == "SUCCESS" {
+                    DispatchQueue.main.async {
+                        self?.performSegue(withIdentifier: "toViewControllerAfterRegister", sender: nil)
+                    }
+                } else {
+                    print("creating task failed")
+                }
+            })
+        } else {
+            TaskClient().updateTask(task: task, completionHander: {[weak self]
+                (status) in
+                if status == "SUCCESS" {
+                    DispatchQueue.main.async {
+                        self?.performSegue(withIdentifier: "toViewControllerAfterRegister", sender: nil)
+                    }
+                } else {
+                    print("updating task failed")
+                }
+            })
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if (!isCreate) {
+            print(self.id)
+            TodoTitleField.text = originTitle
+            TodoDescriptionField.text = originDescription
+        }
+        
         // Do any additional setup after loading the view.
     }
     

@@ -127,6 +127,7 @@
                     <connections>
                         <outlet property="TodoDescriptionField" destination="PeY-wS-dgJ" id="T2D-qw-NUl"/>
                         <outlet property="TodoTitleField" destination="7gA-dr-YeN" id="FQj-Ws-8hE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerAfterRegister" id="KDe-wG-h3Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64J-WG-GQ5" sceneMemberID="firstResponder"/>
@@ -206,6 +207,8 @@
                     <connections>
                         <outlet property="descriptionTextLabel" destination="DLG-D3-yGi" id="V7f-jc-1lk"/>
                         <outlet property="titleTextLabel" destination="4N8-ub-9x2" id="ePK-jI-7GA"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerAfterDelete" id="Dw8-6x-8sX"/>
+                        <segue destination="0Qm-Md-mDn" kind="show" identifier="toRegisterController" id="2Lm-Ao-p25"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHX-HR-IVM" sceneMemberID="firstResponder"/>
@@ -214,6 +217,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JxG-pb-jXD"/>
+        <segue reference="2Lm-Ao-p25"/>
+        <segue reference="Dw8-6x-8sX"/>
     </inferredMetricsTieBreakers>
 </document>
