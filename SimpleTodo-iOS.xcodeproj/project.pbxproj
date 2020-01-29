@@ -19,7 +19,7 @@
 		B0635BAC23E089F600BEB236 /* FetchTasksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BAB23E089F600BEB236 /* FetchTasksResponse.swift */; };
 		B0635BAE23E08A1600BEB236 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BAD23E08A1600BEB236 /* Task.swift */; };
 		B0DCB9C423DDC95E0014F393 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCB9C323DDC95E0014F393 /* DetailController.swift */; };
-		B0FFEAA023D2E0EA009B2FF6 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEA9F23D2E0EA009B2FF6 /* AddController.swift */; };
+		B0FFEAA023D2E0EA009B2FF6 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEA9F23D2E0EA009B2FF6 /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		B0635BAB23E089F600BEB236 /* FetchTasksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTasksResponse.swift; sourceTree = "<group>"; };
 		B0635BAD23E08A1600BEB236 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B0DCB9C323DDC95E0014F393 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
-		B0FFEA9F23D2E0EA009B2FF6 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
+		B0FFEA9F23D2E0EA009B2FF6 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 				B02494EC23D2C6B200D38C35 /* ViewController.swift */,
 				B0635BA723E078E400BEB236 /* TaskClient.swift */,
 				B02494EE23D2C6B200D38C35 /* Main.storyboard */,
-				B0FFEA9F23D2E0EA009B2FF6 /* AddController.swift */,
+				B0FFEA9F23D2E0EA009B2FF6 /* RegisterController.swift */,
 				B02494F123D2C6B300D38C35 /* Assets.xcassets */,
 				B02494F323D2C6B300D38C35 /* LaunchScreen.storyboard */,
 				B02494F623D2C6B300D38C35 /* Info.plist */,
@@ -274,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0FFEAA023D2E0EA009B2FF6 /* AddController.swift in Sources */,
+				B0FFEAA023D2E0EA009B2FF6 /* RegisterController.swift in Sources */,
 				B02494ED23D2C6B200D38C35 /* ViewController.swift in Sources */,
 				B0635BAC23E089F600BEB236 /* FetchTasksResponse.swift in Sources */,
 				B02494EB23D2C6B200D38C35 /* AppDelegate.swift in Sources */,

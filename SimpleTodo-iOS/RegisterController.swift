@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddController: UIViewController {
+class RegisterController: UIViewController {
 
     @IBOutlet weak var TodoTitleField: UITextField!
     @IBOutlet weak var TodoDescriptionField: UITextField!
