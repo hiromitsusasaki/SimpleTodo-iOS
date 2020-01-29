@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tasks: [Task]?
+    var currentIndex: Int = -1
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,14 +25,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = indexPath.row
-        if let detailController = storyboard?.instantiateViewController(withIdentifier: "DetailController") as? DetailController {
-            detailController.task = tasks?[index] ?? Task(id: -1, title: "", description: "")
-            navigationController?.pushViewController(detailController, animated: true)
+        self.currentIndex = indexPath.row
+        self.performSegue(withIdentifier: "toDetailController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailController" {
+            let detailController = segue.destination as! DetailController
+            detailController.task = tasks?[currentIndex] ?? Task(id: -1, title: "", description: "")
         }
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -18,6 +18,8 @@
 		B0635BAA23E089CA00BEB236 /* CreateTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BA923E089CA00BEB236 /* CreateTaskResponse.swift */; };
 		B0635BAC23E089F600BEB236 /* FetchTasksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BAB23E089F600BEB236 /* FetchTasksResponse.swift */; };
 		B0635BAE23E08A1600BEB236 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BAD23E08A1600BEB236 /* Task.swift */; };
+		B0635BB223E1988A00BEB236 /* UpdateTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BB123E1988A00BEB236 /* UpdateTaskResponse.swift */; };
+		B0635BB423E199B900BEB236 /* DeleteTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0635BB323E199B900BEB236 /* DeleteTaskResponse.swift */; };
 		B0DCB9C423DDC95E0014F393 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCB9C323DDC95E0014F393 /* DetailController.swift */; };
 		B0FFEAA023D2E0EA009B2FF6 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEA9F23D2E0EA009B2FF6 /* RegisterController.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		B0635BA923E089CA00BEB236 /* CreateTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskResponse.swift; sourceTree = "<group>"; };
 		B0635BAB23E089F600BEB236 /* FetchTasksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTasksResponse.swift; sourceTree = "<group>"; };
 		B0635BAD23E08A1600BEB236 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B0635BB123E1988A00BEB236 /* UpdateTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskResponse.swift; sourceTree = "<group>"; };
+		B0635BB323E199B900BEB236 /* DeleteTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskResponse.swift; sourceTree = "<group>"; };
 		B0DCB9C323DDC95E0014F393 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		B0FFEA9F23D2E0EA009B2FF6 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,8 @@
 				B0635BA923E089CA00BEB236 /* CreateTaskResponse.swift */,
 				B0635BAB23E089F600BEB236 /* FetchTasksResponse.swift */,
 				B0635BAD23E08A1600BEB236 /* Task.swift */,
+				B0635BB123E1988A00BEB236 /* UpdateTaskResponse.swift */,
+				B0635BB323E199B900BEB236 /* DeleteTaskResponse.swift */,
 			);
 			path = "SimpleTodo-iOS";
 			sourceTree = "<group>";
@@ -276,8 +282,10 @@
 			files = (
 				B0FFEAA023D2E0EA009B2FF6 /* RegisterController.swift in Sources */,
 				B02494ED23D2C6B200D38C35 /* ViewController.swift in Sources */,
+				B0635BB423E199B900BEB236 /* DeleteTaskResponse.swift in Sources */,
 				B0635BAC23E089F600BEB236 /* FetchTasksResponse.swift in Sources */,
 				B02494EB23D2C6B200D38C35 /* AppDelegate.swift in Sources */,
+				B0635BB223E1988A00BEB236 /* UpdateTaskResponse.swift in Sources */,
 				B0DCB9C423DDC95E0014F393 /* DetailController.swift in Sources */,
 				B0635BA823E078E400BEB236 /* TaskClient.swift in Sources */,
 				B0635BAE23E08A1600BEB236 /* Task.swift in Sources */,

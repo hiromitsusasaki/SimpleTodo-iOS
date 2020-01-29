@@ -56,6 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="880-to-5Bu" id="TlM-vQ-LGM"/>
+                        <segue destination="4pC-wG-EiW" kind="show" identifier="toDetailController" id="ons-fY-IQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,6 +164,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4N8-ub-9x2">
                                 <rect key="frame" x="20" y="169" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="detailController"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -175,19 +177,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLG-D3-yGi">
-                                <rect key="frame" x="20" y="279" width="374" height="86"/>
+                                <rect key="frame" x="20" y="270" width="374" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ia-qh-Rzh">
+                                <rect key="frame" x="268" y="411" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="todoEditButton:" destination="4pC-wG-EiW" eventType="touchUpInside" id="UNM-lq-HJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-tp-jHA">
+                                <rect key="frame" x="74" y="410" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="todoDeleteButton:" destination="4pC-wG-EiW" eventType="touchUpInside" id="BdS-Nb-LEg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zyE-fa-b8L"/>
                     </view>
                     <connections>
-                        <outlet property="DescriptionTextField" destination="DLG-D3-yGi" id="lfh-vp-HUV"/>
-                        <outlet property="TitleTextField" destination="4N8-ub-9x2" id="7RQ-6L-hvU"/>
+                        <outlet property="descriptionTextLabel" destination="DLG-D3-yGi" id="V7f-jc-1lk"/>
+                        <outlet property="titleTextLabel" destination="4N8-ub-9x2" id="ePK-jI-7GA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHX-HR-IVM" sceneMemberID="firstResponder"/>
@@ -196,6 +214,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sE4-RA-9bc"/>
+        <segue reference="JxG-pb-jXD"/>
     </inferredMetricsTieBreakers>
 </document>
